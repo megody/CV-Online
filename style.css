@@ -263,3 +263,35 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
 }
+@media (max-width: 768px) {
+    .cv-container {
+        width: 100%;  /* Fa occupare tutta la larghezza */
+        max-width: 100vw;  /* Impedisce il taglio laterale */
+        display: flex;
+        flex-direction: row;  /* Mantiene la struttura affiancata */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 35%; /* Mantiene la sidebar a sinistra */
+        padding: 15px;
+    }
+
+    .sidebar img {
+        width: 100%; /* L'immagine si ridimensiona alla sidebar */
+        max-width: 130px; /* Impedisce che diventi troppo grande */
+        height: auto;
+    }
+
+    .main {
+        width: 65%; /* Il contenuto rimane a destra senza tagliarsi */
+        padding: 15px;
+        overflow-x: hidden; /* Impedisce che il testo venga tagliato */
+    }
+
+    .job h3, .job p, .skills, .softskills, .istruzione, .lingue {
+        text-align: left;
+        font-size: 14px; /* Riduce leggermente i testi per evitare tagli */
+    }
+}

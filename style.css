@@ -1,0 +1,265 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: white;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.cv-container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.sidebar {
+    background: #0b0b0b;
+    padding: 30px;
+    width: 35%;
+    text-align: left;
+}
+.sidebar img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+}
+.sidebar h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.qualifica {
+    font-size: 16px;
+    font-weight: bold;
+    color: #C4FF01;
+    margin-bottom: 10px;
+}
+.intro {
+    font-size: 14px;
+    font-style: regular;
+    margin-bottom: 20px;
+    font-weight:300;
+}
+.sidebar .info {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.lingue, .istruzione, .contatti, .softskills {
+    margin-top: 20px;
+}
+.lingue h3, .istruzione h3 {
+    color: #C4FF01;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.main {
+    padding: 30px;
+    width: 65%;
+}
+h2 {
+    color: #C4FF01;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.job h3 {
+    font-size: 16px;
+    color: #C4FF01;
+    margin-bottom: 5px;
+  
+}
+.job p {
+    font-size: 14px;
+    
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top:-10px;
+}
+
+.skill {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.skill span {
+    color: #C4FF01;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.level {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.level div {
+    height: 100%;
+    background: #C4FF01;
+    border-radius: 5px;
+}
+
+.bold { font-weight: 700; } /* Bold */
+.thin { font-weight: 200; } /* Thin */
+.semi { font-weight: 300; }
+.reg { font-weight: 400; }
+
+.istruzione {
+    
+  border-bottom: none;
+     /* Linea sottile bianca semi-trasparente */
+}
+
+/* Rimuove la linea dall'ultima istruzione */
+.istruzione :last-child {
+   padding-bottom: 20px;
+    margin-bottom: 8px; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+ul {
+    font-size: 14px; /* Cambia la dimensione dell'elenco */
+  
+}
+
+li {
+    font-size: 14px; /* Cambia la dimensione dei singoli elementi */
+  line-height:20px;
+   margin-bottom: 8px;
+}
+
+.contatti h3 {
+    color: #C4FF01;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.btn {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    border: 1px solid #C4FF01;
+    background-color:black;
+    cursor: pointer;
+    border-radius:8px;
+    font-size: 14px;
+    margin-top:20px;
+}
+
+.lingue h3 {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top:20px;
+}
+
+.softskills h3 {
+    color: #C4FF01;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.softskills p {
+font-size:14px;
+  padding-bottom:20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main h5 {
+  margin-bottom:-10px;
+}
+
+.lingue p {
+  font-size:14px;
+}
+
+.lingue :last-child.thin {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom:20px;
+}
+
+.istruzione p {
+  font-size:14px;
+}
+
+
+.job p:last-of-type  {
+  border:none; border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom:20px;
+
+}
+
+.privacy {
+    padding-top:50px;
+    font-size:12px;
+    text-align: left;
+    opacity: 0.7;
+    
+}
+
+
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.flag {
+    font-size: 18px;
+}
+
+.switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #C4FF01;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background: black;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background: #A3E000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}

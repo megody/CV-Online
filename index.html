@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CV TRADOTTO</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="it">
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -29,6 +19,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <div class="cv-container">
         <aside class="sidebar">
             <img src="https://media.licdn.com/dms/image/v2/D4D03AQFZ9EcAWzpH8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676737207411?e=1746662400&v=beta&t=kooBrOy3hksz3cwzPJBm8Xd9q3YwvI14OFhYx7HY3to" alt="Foto Profilo">
@@ -65,7 +58,7 @@
                 <a href="https://www.linkedin.com/in/matilde-irace" target="_blank">
     <button class="btn">LinkedIn</button>
 </a>
-             <button class="btn" onclick="generatePDF()">Scarica PDF</button>
+             <button id="download-pdf" class="btn">Scarica PDF</button>
             
              <p class="privacy">
     I hereby authorize the use of my personal data in compliance with the Italian law N° 675/96
@@ -145,6 +138,7 @@
     </div>
 </body>
 </html>
+
 <!-- partial -->
   <script  src="./script.js"></script>
 

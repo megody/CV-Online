@@ -23,15 +23,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function generatePDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    
-    doc.text("Matilde Irace - CV", 10, 10); // Titolo CV
-    
-    // Prende il contenuto del CV e lo inserisce nel PDF
-    const content = document.body.innerText;
-    doc.text(content, 10, 20);
-    
-    doc.save("Matilde_Irace_CV.pdf"); // Salva il PDF
-}
+document.getElementById("download-pdf").addEventListener("click", function () {
+    const cv = document.querySelector(".cv-container");
+
+    html2canvas(cv, { scale: 2 }).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({
+            orientation: "portrait",
+            unit: "mm",
+            format: "a4"
+        });
+
+        const imgWidth = 210; // Larghezza A4 in mm
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+        pdf.save("Matilde_Irace_CV.pdf");
+    });
+});
